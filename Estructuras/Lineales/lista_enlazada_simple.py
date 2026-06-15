@@ -22,3 +22,22 @@ class LinkedList:
             print(temp.data,"->",end="")
             temp = temp.next
         print(" Tail")
+    def insert_at_end(self,data):
+        #Paso1: Crear un nuevo nodo
+        new_node = Node(data)
+        #Paso2: Verificar si la lista esta vacia
+        if self.head is None and self.tail is None:
+            self.head = new_node
+            self.tail = new_node
+        else:
+            #Paso3: El nodo actual apunta al nuevo nodo
+            self.tail.next = new_node
+            #Paso4: El nuevo nodo se convierte en la cola de la lista
+            self.tail = new_node
+    def search(self,data):
+        temp = self.head
+        while temp is not None:
+            if temp.data == data:                                        
+                return True
+            temp = temp.next
+        return False

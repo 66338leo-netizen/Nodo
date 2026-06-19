@@ -1,43 +1,88 @@
 from Estructuras.Lineales.nodo import Node
-class LinkedList:
+from PyQt5.QtWidgets import QDialog
+from PyQt5 import uic
+
+class LinkedList(QDialog):
     def __init__(self):
+        super().__init__()
+        uic.loadUi("ui/Dialog1.ui", self)
+
         self.head = None
         self.tail = None
-    def insert_at_beginning(self,data):
-        #Paso1: Crear un nuevo nodo
+        self.agregari.clicked.connect(self.insert_at_beginning)
+        self.agregarf.clicked.connect(self.insert_at_end)
+        self.imprimir.clicked.connect(self.print_linked_list)
+        self.buscar.clicked.connect(self.search)
+        self.deletei.clicked.connect(self.delete_at_beginning)
+        self.deletef.clicked.connect(self.delete_at_end)
+
+    def insert_at_beginning(self):
+        data = self.lineEdit.text()
         new_node = Node(data)
-        #Paso2: Verificar si la lista esta vacia
-        if self.head is None and self.tail is None:
-            self.head = new_node
-            self.tail = new_node
+
+        if self.head is None:
+            self.head = self.tail = new_node
         else:
-            #Paso3: El nuevo nodo apunta al nodo actual
             new_node.next = self.head
-            #Paso4: El nuevo nodo se convierte en la cabeza de la lista
             self.head = new_node
-    def print_linked_list(self):
-        temp= self.head
-        print("Head -> ",end="")
-        while temp is not None:
-            print(temp.data,"->",end="")
-            temp = temp.next
-        print(" Tail")
-    def insert_at_end(self,data):
-        #Paso1: Crear un nuevo nodo
+
+    def insert_at_end(self):
+        data = self.lineEdit.text()
         new_node = Node(data)
-        #Paso2: Verificar si la lista esta vacia
-        if self.head is None and self.tail is None:
-            self.head = new_node
-            self.tail = new_node
+
+        if self.head is None:
+            self.head = self.tail = new_node
         else:
-            #Paso3: El nodo actual apunta al nuevo nodo
             self.tail.next = new_node
-            #Paso4: El nuevo nodo se convierte en la cola de la lista
             self.tail = new_node
-    def search(self,data):
+
+    def print_linked_list(self):
         temp = self.head
+        texto = "Head -> "
+
         while temp is not None:
-            if temp.data == data:                                        
-                return True
+            texto += f"{temp.data} -> "
             temp = temp.next
-        return False
+
+        texto += "Tail"
+
+        self.lineEdit_2.setText(texto)
+
+    def search(self):
+        data = self.lineEdit.text()
+        temp = self.head
+
+        while temp is not None:
+            if temp.data == data:
+                self.lineEdit_2.setText("Elemento encontrado")
+                return
+
+            temp = temp.next
+
+        self.lineEdit_2.setText("Elemento no encontrado")
+
+    def delete_at_beginning(self):
+        if self.head is None:
+            return
+
+        if self.head == self.tail:
+            self.head = None
+            self.tail = None
+        else:
+            self.head = self.head.next
+
+    def delete_at_end(self):
+        if self.head is None:
+            return
+
+        if self.head == self.tail:
+            self.head = None
+            self.tail = None
+        else:
+            temp = self.head
+
+            while temp.next != self.tail:
+                temp = temp.next
+
+            temp.next = None
+            self.tail = temp

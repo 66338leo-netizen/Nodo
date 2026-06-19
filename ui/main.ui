@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">QMainWindow {
+    background-color: #121212;
+    color: white;
+}
+
+QWidget {
+    background-color: #121212;
+    color: white;
+    font-size: 12px;
+}
+
+QPushButton {
+    background-color: #1E1E1E;
+    color: white;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    padding: 6px;
+}
+
+QPushButton:hover {
+    background-color: #2C2C2C;
+}
+
+QPushButton:pressed {
+    background-color: #0D0D0D;
+}
+
+QLineEdit {
+    background-color: #1A1A1A;
+    color: white;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    padding: 4px;
+}
+
+QTextEdit {
+    background-color: #1A1A1A;
+    color: white;
+    border: 1px solid #333333;
+}
+
+QComboBox {
+    background-color: #1A1A1A;
+    color: white;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    padding: 4px;
+}
+
+QMenuBar {
+    background-color: #0F0F0F;
+    color: white;
+}
+
+QMenuBar::item:selected {
+    background-color: #2C2C2C;
+}
+
+QMenu {
+    background-color: #1A1A1A;
+    color: white;
+}
+
+QMenu::item:selected {
+    background-color: #2C2C2C;
+}
+
+QStatusBar {
+    background-color: #0F0F0F;
+    color: white;
+}</string>
+   </property>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuLineales">
+    <property name="title">
+     <string>Lineales</string>
+    </property>
+    <addaction name="actionLista_Enlazada"/>
+    <addaction name="actionSalir"/>
+   </widget>
+   <addaction name="menuLineales"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionLista_Enlazada">
+   <property name="text">
+    <string>Lista Enlazada</string>
+   </property>
+  </action>
+  <action name="actionSalir">
+   <property name="text">
+    <string>Salir</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+    background-color: #121212;
+    color: white;
+    border: 2px solid #2A2A2A;
+    border-radius: 12px;
+}
+
+QLabel {
+    color: white;
+    font-size: 12px;
+}
+
+QLineEdit {
+    background-color: #1E1E1E;
+    color: white;
+    border: 1px solid #3A3A3A;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+QLineEdit:focus {
+    border: 1px solid #5A5A5A;
+}
+
+QPushButton {
+    background-color: #242424;
+    color: white;
+    border: 1px solid #3A3A3A;
+    border-radius: 8px;
+    padding: 6px;
+}
+
+QPushButton:hover {
+    background-color: #303030;
+}
+
+QPushButton:pressed {
+    background-color: #1A1A1A;
+}
+
+QComboBox {
+    background-color: #1E1E1E;
+    color: white;
+    border: 1px solid #3A3A3A;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+QTextEdit {
+    background-color: #1E1E1E;
+    color: white;
+    border: 1px solid #3A3A3A;
+    border-radius: 8px;
+}
+
+QSpinBox {
+    background-color: #1E1E1E;
+    color: white;
+    border: 1px solid #3A3A3A;
+    border-radius: 8px;
+    padding: 5px;
+}</string>
+  </property>
+  <widget class="QLineEdit" name="lineEdit_2">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>180</y>
+     <width>321</width>
+     <height>91</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="agregari">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>80</y>
+     <width>161</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Agregar Inicio</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="agregarf">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>110</y>
+     <width>161</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Agregar Final</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="deletef">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>110</y>
+     <width>151</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Eliminar Final</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="deletei">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>80</y>
+     <width>151</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Eliminar Inicio</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="buscar">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>140</y>
+     <width>151</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Buscar</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="imprimir">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>140</y>
+     <width>161</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Imprimir</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>30</y>
+     <width>321</width>
+     <height>41</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

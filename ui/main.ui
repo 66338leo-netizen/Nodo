@@ -102,6 +102,7 @@ QStatusBar {
      <string>Lineales</string>
     </property>
     <addaction name="actionLista_Enlazada"/>
+    <addaction name="actionPilas"/>
     <addaction name="actionSalir"/>
    </widget>
    <addaction name="menuLineales"/>
@@ -115,6 +116,11 @@ QStatusBar {
   <action name="actionSalir">
    <property name="text">
     <string>Salir</string>
+   </property>
+  </action>
+  <action name="actionPilas">
+   <property name="text">
+    <string>Pilas</string>
    </property>
   </action>
  </widget>

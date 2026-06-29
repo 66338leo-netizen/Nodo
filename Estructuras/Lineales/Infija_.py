@@ -7,7 +7,7 @@ class InfijaPosfija:
         self.pila = Stack()
 
     def prioridad(self, operador):
-        if operador == "$":
+        if operador == "^":
             return 3
         elif operador == "*" or operador == "/":
             return 2

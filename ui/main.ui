@@ -105,7 +105,14 @@ QStatusBar {
     <addaction name="actionPilas"/>
     <addaction name="actionSalir"/>
    </widget>
+   <widget class="QMenu" name="menuAplicaciones">
+    <property name="title">
+     <string>Aplicaciones</string>
+    </property>
+    <addaction name="actionConvertidor_Infija_Posfija"/>
+   </widget>
    <addaction name="menuLineales"/>
+   <addaction name="menuAplicaciones"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionLista_Enlazada">
@@ -121,6 +128,16 @@ QStatusBar {
   <action name="actionPilas">
    <property name="text">
     <string>Pilas</string>
+   </property>
+  </action>
+  <action name="actionInfija_Posfija">
+   <property name="text">
+    <string>Infija-Posfija</string>
+   </property>
+  </action>
+  <action name="actionConvertidor_Infija_Posfija">
+   <property name="text">
+    <string>Convertidor Infija_Posfija</string>
    </property>
   </action>
  </widget>

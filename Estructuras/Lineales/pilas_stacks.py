@@ -4,6 +4,9 @@ from Estructuras.Lineales.nodo import Node
 class Stack:
     def __init__(self):
         self.top = None
+        
+    def is_empty(self):
+        return self.top is None
 
     def push(self, data):
         nuevo_nodo = Node(data)
